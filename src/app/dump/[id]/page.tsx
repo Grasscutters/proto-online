@@ -84,12 +84,11 @@ export async function generateMetadata({ params }: IProps) {
     const userData = await user.json();
     return {
         title: `${userData.global_name}'s Packet Dump`,
-        description: `Packet dump with hash ${dump.hash}.`,
+        description: `Packet dump with hash \`${dump.hash.substring(0, 15)}\`...`,
         openGraph: {
             images: [
                 { url: `https://cdn.discordapp.com/avatars/${userData.id}/${userData.avatar}.png` }
             ]
-        },
-        themeColor: userData.accent_color
+        }
     } satisfies Metadata;
 }
