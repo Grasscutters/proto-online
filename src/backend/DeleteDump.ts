@@ -1,8 +1,11 @@
 "use server";
 
+import { unlink } from "node:fs/promises";
+
 import { auth } from "@backend/auth.ts";
 import { prisma } from "@backend/db.ts";
 import { redirect } from "next/navigation";
+import { BASE } from "@backend/filesystem.ts";
 
 /**
  * Deletes a dump from the database.
@@ -55,7 +58,15 @@ async function DeleteDump(dumpId: string, queryOnly: boolean = false): Promise<[
         }
     });
 
-    return [true, true];
+    try {
+        // Delete the file from the file system.
+        const filePath = `${BASE}/${process.env.DUMP_DIRECTORY}/${dumpId}.json`;
+        await unlink(filePath);
+
+        return [true, true];
+    } catch (error) {
+        return [false, true];
+    }
 }
 
 export default DeleteDump;
