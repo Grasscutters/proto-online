@@ -1,0 +1,12 @@
+h1 {
+    @apply text-xl;
+}
+
+h2 {
+    @apply text-lg;
+}
+
+a {
+    @apply text-blue-500;
+    @apply hover:text-blue-700 hover:underline;
+}

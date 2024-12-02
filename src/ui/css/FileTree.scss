@@ -1,0 +1,28 @@
+.FileTree {
+    //scrollbar-width: thin;
+    //scrollbar-color: #2E79A0 transparent;
+}
+
+.FileTree::-webkit-scrollbar {
+    width: 7px;
+}
+
+.FileTree::-webkit-scrollbar-thumb {
+    @apply bg-dark-blue;
+
+    border-left: 5px solid transparent;
+    background-clip: padding-box;
+}
+
+.FileTree::-webkit-scrollbar-track {
+    @apply bg-transparent;
+    //margin-right: 10px;
+}
+
+.Label {
+    @apply flex flex-row gap-1 items-center select-none px-1 py-0.5 rounded;
+
+    &:hover {
+        @apply bg-dark-blue;
+    }
+}

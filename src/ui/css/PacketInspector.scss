@@ -1,0 +1,7 @@
+.Inspector_Column {
+    @apply relative flex flex-col-reverse w-full justify-center items-center;
+}
+
+.Inspector_Label {
+    @apply absolute bottom-0;
+}

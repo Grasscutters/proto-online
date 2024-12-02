@@ -1,0 +1,88 @@
+.jse-theme-dark {
+    --jse-main-border: none !important;
+}
+
+.Visualizer_Labels {
+    @apply w-full flex flex-row text-white-100 bg-black-100;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    span {
+        @apply flex px-3 py-1.5 justify-center;
+
+        font-size: 0.8em;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.Visualizer_Mode {
+    @apply flex flex-col p-1 gap-0.5 text-white-100 text-center uppercase select-none;
+
+    span {
+        @apply w-full px-1 font-bold rounded box-border;
+        @apply hover:bg-gray-500 hover:cursor-pointer;
+
+        font-size: 0.8em;
+    }
+}
+
+.Visualizer_Input {
+    @apply w-full flex flex-row px-2 text-white-100 bg-black-900 outline-0;
+}
+
+#visualizer-sidebar {
+    color: white;
+    font-size: 36px;
+
+    button {
+        @apply p-2;
+    }
+}
+
+#visualizer-resizer {
+    @apply w-3 z-10 bg-gray-500;
+
+    &:hover {
+        @apply bg-gray-600 cursor-w-resize;
+    }
+}
+
+/// <editor-fold desc="Categories">
+.time {
+    width: 4rem;
+    font-size: 0.8em;
+}
+
+.index {
+    width: 4rem;
+    font-size: 0.8em;
+}
+
+.source {
+    width: 5.5rem;
+}
+
+.id {
+    width: 5rem;
+}
+
+.packet-name {
+    width: 20rem;
+    justify-content: start !important;
+}
+
+.length {
+    width: 4rem;
+}
+
+.data {
+    flex-grow: 1;
+    justify-content: start;
+}
+
+span[data-type="number"] {
+    font-weight: 1000;
+    font-family: monospace;
+}
+/// </editor-fold>

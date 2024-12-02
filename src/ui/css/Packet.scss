@@ -1,0 +1,33 @@
+.Packet {
+    @apply flex flex-row text-white-100 select-none;
+
+    span {
+        @apply px-2 flex h-full items-center justify-center;
+
+        font-size: 0.9em;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    div {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.Packet_Source {
+    @apply text-sm self-center rounded;
+
+    line-height: 1.3;
+
+    height: auto !important;
+    font-size: 0.8em !important;
+    padding: 1px 2px 1px 2px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.client {
+    background-color: #2E79A0;
+}
+
+.server {
+    background-color: #976115;
+}

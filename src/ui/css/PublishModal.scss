@@ -1,0 +1,6 @@
+.Button {
+    @apply px-2 py-1 rounded-md;
+    @apply hover:brightness-90;
+    @apply enabled:active:opacity-80 enabled:active:scale-95;
+    @apply transition-all duration-200 ease-in-out;
+}
