@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "incremental": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "jsxImportSource": "react",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@ui/*": ["src/ui/*"],
+      "@css/*": ["src/ui/css/*"],
+      "@components/*": ["src/ui/components/*"],
+      "@backend/*": ["src/backend/*"],
+      "@stores/*": ["src/backend/stores/*"],
+      "@hooks/*": ["src/hooks/*"]
+    },
+    "plugins": [ { "name": "next" } ]
+  },
+  "include": ["src", ".next/types/**/*.ts"],
+  "references": [
+    { "path": "./tsconfig.node.json" }
+  ],
+  "exclude": ["node_modules"]
+}
