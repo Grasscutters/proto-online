@@ -60,7 +60,7 @@ async function DeleteDump(dumpId: string, queryOnly: boolean = false): Promise<[
 
     try {
         // Delete the file from the file system.
-        const filePath = `${BASE}/${process.env.DUMP_DIRECTORY}/${dumpId}.json`;
+        const filePath = `${BASE}/${dumpId}.json`;
         await unlink(filePath);
 
         return [true, true];

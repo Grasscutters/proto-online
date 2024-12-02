@@ -6,7 +6,7 @@ import { writeFile } from "node:fs/promises";
 import { auth } from "@backend/auth.ts";
 import { prisma } from "@backend/db.ts";
 import { Packet } from "@backend/types.ts";
-import { BASE } from "@backend/filesystem.ts";
+import { BASE, createBase } from "@backend/filesystem.ts";
 
 const BLACKLISTED = [
     "GetPlayerTokenReq",
@@ -74,6 +74,9 @@ async function PublishDump(
  */
 async function saveDump(id: string, data: string): Promise<void> {
     const filePath = `${BASE}/${id}.json`;
+
+    // Create the base directory if needed.
+    await createBase();
 
     // Check if the file exists.
     if (existsSync(filePath)) {
